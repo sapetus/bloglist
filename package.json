@@ -23,5 +23,8 @@
       "react-app/jest",
       "plugin:cypress/recommended"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }
