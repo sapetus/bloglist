@@ -4,7 +4,9 @@
     "build:frontend": "cd bloglist-frontend && npm run build",
     "start:backend": "cd bloglist-backend && npm start",
     "start:prod": "cd bloglist-backend && npm run start:prod",
-    "heroku-postbuild": "cd bloglist-frontend && npm install && npm run build"
+    "start:test": "cd bloglist-backend && npm run start:test",
+    "heroku-postbuild": "cd bloglist-frontend && npm install && npm run build",
+    "cypress": "cd bloglist-frontend && npm run cypress:open"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

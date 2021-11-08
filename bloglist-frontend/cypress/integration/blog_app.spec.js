@@ -16,11 +16,11 @@ describe('Blog app', function () {
     }
     cy.request('POST', 'http://localhost:3003/api/users', testUser2)
 
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3003')
   })
 
   it('Login form is shown', function () {
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3003')
     cy.get('#login-form')
   })
 
