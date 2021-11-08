@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start:frontend": "cd bloglist-frontend && npm start",
+    "build:frontend": "cd bloglist-frontend && npm run build",
+    "start:backend": "cd bloglist-backend && npm start",
+    "start:prod": "cd bloglist-backend && npm run start:prod",
+    "heroku-postbuild": "cd bloglist-frontend && npm install && npm run build"
+  }
+}

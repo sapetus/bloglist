@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYwZDU5N2JkZjg1MTcxMzJhOGZmNzAyNSIsImlhdCI6MTYyNDk2NDg0OH0.2l1Ygw8DWYbbpzwJDqH-SqOMZBJlDnpSNZ0s2WdBXMg
+
+{
+  "title": "How to cook pasta",
+  "author": "Mr Pasta",
+  "url": "www.cookwithmrpasta.com",
+  "likes": 11
+}
