@@ -16,5 +16,12 @@
     "lodash": "^4.17.21",
     "mongoose": "^5.12.10",
     "mongoose-unique-validator": "^2.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:cypress/recommended"
+    ]
   }
 }
