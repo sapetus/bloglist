@@ -74,10 +74,11 @@ describe('Blog tests', () => {
         }
 
         test('posting a blog without a token doesnt work', async () => {
-            await api
+            const x = await api
                 .post('/api/blogs')
                 .send(newBlog)
                 .expect(401)
+            console.log(x)
 
             const blogsInDb = await helper.blogsInDb()
 
