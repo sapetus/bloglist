@@ -85,12 +85,11 @@ describe('Blog tests', () => {
         })
 
         test('when a blog is POSTed, number of blogs increases', async () => {
-            const users = await User.find({})
-            console.log(users)
             const loginResponse = await api
                 .post('/api/login')
                 .send(helper.user)
                 .expect(200)
+            console.log(loginResponse)
 
             const loginToken = loginResponse.body.token
 
