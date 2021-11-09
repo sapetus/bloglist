@@ -7,7 +7,10 @@
     "start:test": "cd bloglist-backend && npm run start:test",
     "heroku-postbuild": "cd bloglist-frontend && npm install && npm run build",
     "cypress": "cd bloglist-frontend && npm run cypress:open",
-    "eslint": "cd bloglist-frontend && npm run eslint"
+    "eslint": "cd bloglist-frontend && npm run eslint",
+    "test:backend": "cd bloglist-backend && npm run test",
+    "install:frontend": "cd bloglist-frontend && npm install",
+    "install:backend": "cd bloglist-backend && npm install"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

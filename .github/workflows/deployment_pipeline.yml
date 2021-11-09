@@ -13,7 +13,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: npm install
-        run: npm install && cd bloglist-frontend && npm install
+      - name: install frontend
+        run: npm run install:frontend
+      - name: install backend
+        run: npm run install:backend
       - name: lint
         run: npm run eslint
+      - name: build
+        run: npm run build:frontend
+      - name: test backend
+        run: npm run test:backend
