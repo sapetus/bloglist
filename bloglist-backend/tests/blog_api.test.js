@@ -74,17 +74,17 @@ describe('Blog tests', () => {
         }
 
         test('posting a blog without a token doesnt work', async () => {
-            const x = await api
+            await api
                 .post('/api/blogs')
                 .send(newBlog)
                 .expect(401)
-            console.log(x)
 
             const blogsInDb = await helper.blogsInDb()
 
             expect(blogsInDb).toHaveLength(helper.initialBlogs.length)
         })
 
+        //this aint working on CI/CD pipeline
         test('when a blog is POSTed, number of blogs increases', async () => {
             const x = await api.post('/api/login').send(helper.user)
             console.log(x)
