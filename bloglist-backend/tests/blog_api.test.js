@@ -84,10 +84,15 @@ describe('Blog tests', () => {
             expect(blogsInDb).toHaveLength(helper.initialBlogs.length)
         })
 
-        test('when a blog is POSTed, number of blogs increases', async () => {
-            console.log(helper.user)
-            const response = await api.post('/api/login').send(helper.user)
+        test('/api/login is up', async () => {
+            const response = await api.get('/api/login').expect(200)
             console.log(response.body)
+        })
+
+        test('when a blog is POSTed, number of blogs increases', async () => {
+            // console.log(helper.user)
+            // const response = await api.post('/api/login').send(helper.user)
+            // console.log(response.body)
 
             const loginResponse = await api
                 .post('/api/login')
