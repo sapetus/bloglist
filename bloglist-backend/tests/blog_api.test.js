@@ -84,10 +84,10 @@ describe('Blog tests', () => {
             expect(blogsInDb).toHaveLength(helper.initialBlogs.length)
         })
 
-        //this aint working on CI/CD pipeline
         test('when a blog is POSTed, number of blogs increases', async () => {
-            const x = await api.post('/api/login').send(helper.user)
-            console.log(x)
+            console.log(helper.user)
+            const response = await api.post('/api/login').send(helper.user)
+            console.log(response.body)
 
             const loginResponse = await api
                 .post('/api/login')
