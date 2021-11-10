@@ -44,3 +44,4 @@ jobs:
           heroku_email: sampopitkanen@hotmail.com
           healthcheck: "https://vast-badlands-46751.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
