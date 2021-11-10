@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs:
   deployment_pipeline:
@@ -38,6 +41,7 @@ jobs:
           start: npm run start:test
           wait-on: http://localhost:3003
       - uses: akhileshns/heroku-deploy@v3.12.12
+        if: ${{ github.event_name == 'push' }}
         with: 
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: vast-badlands-46751
