@@ -43,7 +43,7 @@ app.get('/health', (req, res) => {
 })
 //version dummy endpoint
 app.get('/version', (req, res) => {
-    res.send('5') //change this as needed, not the actual version
+    res.send('6') //change this as needed, not the actual version
 })
 
 if (process.env.NODE_ENV === 'test') {
