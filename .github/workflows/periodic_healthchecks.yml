@@ -2,7 +2,8 @@ name: Periodic Healthcheck
 
 on:
   schedule:
-    - cron: '0/15 * * * *'
+    # disabled to save heroku's free hours
+    # - cron: '0/15 * * * *'
 
 
 jobs:
